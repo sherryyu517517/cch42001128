@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>114年度 教學優良 / 傑出教師 芳名錄</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+            background: radial-gradient(circle at 20% 30%, #e8fff4, #c4f5e3, #b2e8d6);
+            overflow-x: hidden;
+        }
+        /* 光暈流動背景 */
+        .glow-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(200, 255, 230, 0.3), transparent),
+                        radial-gradient(circle at 70% 70%, rgba(200, 255, 230, 0.7), rgba(150, 230, 200, 0.2), transparent);
+            filter: blur(60px);
+            animation: moveGlow 12s infinite alternate ease-in-out;
+            z-index: -1;
+        }
+        @keyframes moveGlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, -40px); }
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        header img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #055a47;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #0d7058;
+        }
+        iframe {
+            width: 100%;
+            height: 820px;
+            border: none;
+            border-radius: 12px;
+        }
+        @media (max-width: 768px) {
+            iframe { height: 600px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header>
+        <img src="chimei-logo.png" alt="奇美醫院 Logo" />
+        <h1>佳里奇美醫院 114年度 教學優良 / 傑出教師 芳名錄</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>📘 優良教師</h2>
+             <iframe src="114good.pdf"></iframe>
+        </div>
+
+        <div class="card">
+            <h2>🏅 傑出教師</h2>
+             <iframe src="114excellent.pdf"></iframe>
+        </div>
+    </div>
+</body>
+</html>
